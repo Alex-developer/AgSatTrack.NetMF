@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GHI.SQLite</name>
+    </assembly>
+    <members>
+        <member name="T:GHI.SQLite.ResultSet">
+            <summary>Represents the results of SQLite query.</summary>
+        </member>
+        <member name="P:GHI.SQLite.ResultSet.RowCount">
+            <summary>The number of rows in the result set.</summary>
+        </member>
+        <member name="P:GHI.SQLite.ResultSet.ColumnCount">
+            <summary>The number of columns in the result set.</summary>
+        </member>
+        <member name="P:GHI.SQLite.ResultSet.ColumnNames">
+            <summary>The names of the columns.</summary>
+        </member>
+        <member name="P:GHI.SQLite.ResultSet.Data">
+            <summary>
+            The result data. Each entry in the array list represents one row as an ArrayList where each entry represents a cell in that row.
+            </summary>
+        </member>
+        <member name="P:GHI.SQLite.ResultSet.Item(System.Int32)">
+            <summary>The row data for the row with the given index.</summary>
+            <param name="row">The row to access.</param>
+            <returns>The ArrayList for that row.</returns>
+        </member>
+        <member name="P:GHI.SQLite.ResultSet.Item(System.Int32,System.Int32)">
+            <summary>Accesses the data at the given row and column.</summary>
+            <param name="row">The row to access.</param>
+            <param name="column">The column to access.</param>
+            <returns>The object at that row and column.</returns>
+        </member>
+        <member name="T:GHI.SQLite.Database">
+            <summary>A SQLite database. See https://www.ghielectronics.com/docs/135/ for more information.</summary>
+            <remarks>
+            Supported SQLite database version 3.7.13. This class exposes simple methods to open, close and process SQL queries. Currently, this version
+            supports INTEGER, DOUBLE and TEXT record types.
+            </remarks>
+        </member>
+        <member name="M:GHI.SQLite.Database.#ctor">
+            <summary>Creates a SQLite database in memory</summary>
+        </member>
+        <member name="M:GHI.SQLite.Database.#ctor(System.String)">
+            <summary>Opens or creates a SQLite database with the specified path to a file, such as "\\SD\\Database.dat"</summary>
+            <param name="file">The path to the file.</param>
+        </member>
+        <member name="M:GHI.SQLite.Database.Finalize">
+            <summary>The finalizer.</summary>
+        </member>
+        <member name="M:GHI.SQLite.Database.Dispose">
+            <summary>Closes the database.</summary>
+        </member>
+        <member name="M:GHI.SQLite.Database.ExecuteNonQuery(System.String)">
+            <summary>Executes a query that returns no results</summary>
+            <param name="query">The SQL query to execute</param>
+        </member>
+        <member name="M:GHI.SQLite.Database.ExecuteQuery(System.String)">
+            <summary>Executes a query and returns the results.</summary>
+            <param name="query">The SQL query to execute</param>
+            <returns>The results of the query.</returns>
+        </member>
+        <member name="M:GHI.SQLite.Database.Dispose(System.Boolean)">
+            <summary>Closes the database.</summary>
+            <param name="disposing">Whether or not this is called from Dispose.</param>
+        </member>
+        <member name="T:GHI.SQLite.Database.QueryExecutionException">
+            <summary>The exception thrown when the database fails to execute a query.</summary>
+        </member>
+        <member name="T:GHI.SQLite.Database.QueryFinalizationException">
+            <summary>The exception thrown when the database fails to finalize a query.</summary>
+        </member>
+        <member name="T:GHI.SQLite.Database.QueryPrepareException">
+            <summary>The exception thrown when the database fails to prepare the query.</summary>
+        </member>
+        <member name="T:GHI.SQLite.Database.OpenException">
+            <summary>The exception thrown when the database fails to open.</summary>
+        </member>
+    </members>
+</doc>

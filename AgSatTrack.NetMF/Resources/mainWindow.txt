@@ -1,0 +1,29 @@
+<Glide Version="1.0.7">
+  <Window Name="mainWindow" Width="800" Height="480" BackColor="000000">
+    <Image Name="earthImage" X="0" Y="0" Width="800" Height="480" Alpha="255"/>
+
+	<TextBlock Name="satAltLabel" X="0" Y="400" Width="100" Height="20" Alpha="255" Text="Altitude" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+	<TextBlock Name="satAlt" X="100" Y="400" Width="100" Height="20" Alpha="255" Text="" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+    
+	<TextBlock Name="satLatLabel" X="0" Y="420" Width="100" Height="20" Alpha="255" Text="Latitude" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+	<TextBlock Name="satLat" X="100" Y="420" Width="100" Height="20" Alpha="255" Text="" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+
+    <TextBlock Name="satLonLabel" X="0" Y="440" Width="100" Height="20" Alpha="255" Text="Longitude" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+    <TextBlock Name="satLon" X="100" Y="440" Width="100" Height="20" Alpha="255" Text="" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+
+
+    <TextBlock Name="satAzLabel" X="200" Y="400" Width="100" Height="20" Alpha="255" Text="Azimuth" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+    <TextBlock Name="satAz" X="400" Y="400" Width="100" Height="20" Alpha="255" Text="" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+
+    <TextBlock Name="satElLabel" X="200" Y="420" Width="100" Height="20" Alpha="255" Text="Elevation" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+    <TextBlock Name="satEl" X="400" Y="420" Width="100" Height="20" Alpha="255" Text="" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+
+
+	<TextBlock Name="dateLabel" X="500" Y="400" Width="100" Height="20" Alpha="255" Text="Date" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+	<TextBlock Name="date" X="600" Y="400" Width="200" Height="20" Alpha="255" Text="" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/>
+
+    <Button Name="keyboard" X="500" Y="430" Width="80" Height="32" Alpha="255" Text="Keyboard" Font="4" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/>
+
+
+  </Window>
+</Glide>

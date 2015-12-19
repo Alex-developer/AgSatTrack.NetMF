@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GHIElectronics.Gadgeteer.FEZCobraIIWiFi</name>
+    </assembly>
+    <members>
+        <member name="T:GHIElectronics.Gadgeteer.FEZCobraIIWiFi">
+            <summary>The mainboard class for the FEZ Cobra II WiFi.</summary>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.#ctor">
+            <summary>Constructs a new instance.</summary>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.GetStorageDeviceVolumeNames">
+            <summary>The storage device volume names supported by this mainboard.</summary>
+            <returns>The volume names.</returns>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MountStorageDevice(System.String)">
+            <summary>Mounts the device with the given name.</summary>
+            <param name="volumeName">The device to mount.</param>
+            <returns>Whether or not the mount was successful.</returns>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.UnmountStorageDevice(System.String)">
+            <summary>Unmounts the device with the given name.</summary>
+            <param name="volumeName">The device to unmount.</param>
+            <returns>Whether or not the unmount was successful.</returns>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.EnsureRgbSocketPinsAvailable">
+            <summary>Ensures that the RGB socket pins are available by disabling the display controller if needed.</summary>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.SetDebugLED(System.Boolean)">
+            <summary>Sets the state of the debug LED.</summary>
+            <param name="on">The new state.</param>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.SetProgrammingMode(Gadgeteer.Mainboard.ProgrammingInterface)">
+            <summary>Sets the programming mode of the device.</summary>
+            <param name="programmingInterface">The new programming mode.</param>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.PostInit">
+            <summary>This performs post-initialization tasks for the mainboard. It is called by Gadgeteer.Program.Run and does not need to be called manually.</summary>
+        </member>
+        <member name="M:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.OnOnboardControllerDisplayConnected(System.String,System.Int32,System.Int32,System.Int32,Gadgeteer.Modules.Module.DisplayModule.TimingRequirements)">
+            <summary>
+            Configure the onboard display controller to fulfil the requirements of a display using the RGB sockets. If doing this requires rebooting, then the method must reboot and not return. If
+            there is no onboard display controller, then NotSupportedException must be thrown.
+            </summary>
+            <param name="displayModel">Display model name.</param>
+            <param name="width">Display physical width in pixels, ignoring the orientation setting.</param>
+            <param name="height">Display physical height in lines, ignoring the orientation setting.</param>
+            <param name="orientationDeg">Display orientation in degrees.</param>
+            <param name="timing">The required timings from an LCD controller.</param>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MainboardName">
+            <summary>The name of the mainboard.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MainboardVersion">
+            <summary>The current version of the mainboard hardware.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.LDR0">
+            <summary>The InterruptPort object for LDR0.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.LDR1">
+            <summary>The InterruptPort object for LDR1.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.WiFi">
+            <summary>Represents the WiFiRS9110 chip on the mainboard.</summary>
+        </member>
+        <member name="E:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.SDCardMounted">
+            <summary>Raised when the file system of the SD card is mounted.</summary>
+        </member>
+        <member name="E:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.SDCardUnmounted">
+            <summary>Raised when the file system of the SD card is unmounted.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.IsSDCardInserted">
+            <summary>Whether or not an SD card is inserted. Since the SD card detect pin is not interrupt capable, you must manually poll this property then call MountStorageDevice.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.IsSDCardMounted">
+            <summary>Whether or not the SD card is mounted.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.SDCardStorageDevice">
+            <summary>The StorageDevice for the currently mounted SD card.</summary>
+        </member>
+        <member name="E:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MassStorageMounted">
+            <summary>Raised when the file system of the mass storage device is mounted.</summary>
+        </member>
+        <member name="E:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MassStorageUnmounted">
+            <summary>Raised when the file system of the mass storage device is unmounted.</summary>
+        </member>
+        <member name="E:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MouseConnected">
+            <summary>Raised when a mouse is connected.</summary>
+        </member>
+        <member name="E:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.KeyboardConnected">
+            <summary>Raised when a keyboard is connected.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.ConnectedKeyboard">
+            <summary>The current connected keyboard.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.ConnectedMouse">
+            <summary>The current connected mouse.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MassStorageDevice">
+            <summary>The StorageDevice for the currently mounted mass storage device.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.IsKeyboardConnected">
+            <summary>Whether or not the keyboard is connected.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.IsMouseConnected">
+            <summary>Whether or not the mouse is connected.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.IsMassStorageConnected">
+            <summary>Whether or not the mass storage device is connected.</summary>
+        </member>
+        <member name="P:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.IsMassStorageMounted">
+            <summary>Whether or not the mass storage device is mounted.</summary>
+        </member>
+        <member name="T:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.SDCardMountedEventHandler">
+            <summary>Represents the delegate that is used for the Mounted event.</summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="device">A storage device that can be used to access the SD card.</param>
+        </member>
+        <member name="T:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.SDCardUnmountedEventHandler">
+            <summary>Represents the delegate that is used for the Unmounted event.</summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="T:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MassStorageMountedEventHandler">
+            <summary>Represents the delegate that is used for the MassStorageMounted event.</summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="device">A storage device that can be used to access the SD card.</param>
+        </member>
+        <member name="T:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MassStorageUnmountedEventHandler">
+            <summary>Represents the delegate that is used for the MassStorageUnmounted event.</summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="T:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.MouseConnectedEventHandler">
+            <summary>Represents the delegate that is used for the MouseConnected event.</summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="mouse">The object associated with the event.</param>
+        </member>
+        <member name="T:GHIElectronics.Gadgeteer.FEZCobraIIWiFi.KeyboardConnectedEventHandler">
+            <summary>Represents the delegate that is used to handle the KeyboardConnected event.</summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="keyboard">The object associated with the event.</param>
+        </member>
+    </members>
+</doc>
